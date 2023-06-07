@@ -15,7 +15,7 @@ A simple website where logged-in users can have a realtime-chat with WYSA chatbo
 Clone the project
 
 ```bash
-  git clone https://github.com/Pranauv-Kumar1803/Wysa.git
+  git clone https://github.com/Pranauv-Kumar1803/Wysa-MiniProject.git
 ```
 
 Go to the client
