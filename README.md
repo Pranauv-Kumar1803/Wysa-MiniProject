@@ -1,4 +1,4 @@
-# Wysa
+# Wysa - Mini Project
 
 A simple website where logged-in users can have a realtime-chat with WYSA chatbot.
 
