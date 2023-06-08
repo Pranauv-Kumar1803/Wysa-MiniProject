@@ -6,6 +6,7 @@ Live Website Link: https://wysa-miniproject.onrender.com/
 NOTE:
 
 This is a simple website with simplistic designs but a lot of funtionality.
+
 Also, **the website could take some time to load the messages as I have used a free hosting platform for my backend API.**
 
 ## Tech Stack
