@@ -59,6 +59,8 @@ app.use((err, req, res, next) => {
     })
 })
 
+const replies = ["Ok looking into it!", "Understood, looking for results...","Here are the results : ....."];
+
 io.on('connection', (socket) => {
     console.log('user connected', socket.id);
 
@@ -105,6 +107,30 @@ io.on('connection', (socket) => {
         setTimeout(() => {
             io.to(room).emit('receive_msg', { msg: newMessage, username: `${user.name}`, time_created: new Date() });
         }, 1000);
+        
+        const newMessage2 = new Message({
+            room: user.room,
+            message: replies[Math.floor(Math.random()*2)],
+            isBot: true
+        });
+
+        await newMessage2.save();
+
+        setTimeout(() => {
+            io.to(room).emit('receive_msg', { msg: newMessage2, username: `CareBOT`, time_created: new Date() });
+        }, 2000);
+
+        const newMessage3 = new Message({
+            room: user.room,
+            message: replies[2],
+            isBot: true
+        });
+
+        await newMessage3.save();
+
+        setTimeout(() => {
+            io.to(room).emit('receive_msg', { msg: newMessage3, username: `CareBOT`, time_created: new Date() });
+        }, 3000);
     })
 
     socket.on('disconnect', () => {

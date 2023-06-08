@@ -14,6 +14,10 @@ const msgSchema = new schema({
     },
     room : {
         type: String
+    },
+    isBot: {
+        type: Boolean,
+        default: false
     }
 },{timestamps: true, versionKey: false})
 

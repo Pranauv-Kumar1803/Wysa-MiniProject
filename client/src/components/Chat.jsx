@@ -132,10 +132,10 @@ const Chat = ({ socket }) => {
                         {messages.map((message, index) => {
                             return (
                                 <div key={index} style={{ display: 'flex', flexDirection: 'column' }}>
-                                    {(message.username && message.username === "CareBOT")
+                                    {((message.username && message.username === "CareBOT") || (message.msg.isBot === true))
                                         ? <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', gap: '10px' }}>
                                             <img src={wysa_bot} style={{ maxWidth: '30px', maxHeight: '30px', borderRadius: '50%' }} alt="" />
-                                            <Bubble key={index} style={{ alignItems: 'flex-start' }} > {message.msg}
+                                            <Bubble key={index} style={{ alignItems: 'flex-start' }} > {typeof message.msg === 'string' ? message.msg : message.msg.message}
                                             </Bubble>
                                         </div>
                                         :
