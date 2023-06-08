@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ['https://wysa-miniproject.onrender.com','35.160.120.126','44.233.151.27','34.211.200.85']
+        origin: '*',
     },
     pingTimeout: 60000
 });
