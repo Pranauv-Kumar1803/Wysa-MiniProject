@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ['http://localhost:3000']
+        origin: ['https://Wysa-MiniProject.onrender.com']
     },
     pingTimeout: 60000
 });
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json({limit: '50mb'}));
 app.use(cookieParser());
 app.use(cors({
-    origin: ["http://localhost:3000"],
+    origin: ['https://Wysa-MiniProject.onrender.com'],
     methods: ['POST', 'GET', 'HEAD', 'PUT', 'DELETE'],
     credentials: true
 }))
@@ -138,8 +138,8 @@ io.on('connection', (socket) => {
     })
 })
 
-mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@cluster0.d8evjpw.mongodb.net/Chat`).then(() => {
-    server.listen(5500, () => {
-        console.log('server started in port 5500');
+mongoose.connect(`mongodb+srv://pranauv1803:GC4NkcG03ouASXvw@cluster0.d8evjpw.mongodb.net/Chat`).then(() => {
+    server.listen(process.env.PORT || 5500, () => {
+        console.log(`server started in port ${process.env.PORT}`);
     })
 })

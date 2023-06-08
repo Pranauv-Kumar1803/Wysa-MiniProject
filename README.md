@@ -56,7 +56,6 @@ Start the server
 
 Make a .env file inside the folder 'server' like Example.env given below
 
-| ACCESS_TOKEN_SECRET | somethingsecret  |
+| key | value  |
 |---------------------|------------------|
-| MONGO_USERNAME      | pranauv1803      |
-| MONGO_PASSWORD      | GC4NkcG03ouASXvw |
+| ACCESS_TOKEN_SECRET | somethingsecret  |
