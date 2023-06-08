@@ -6,7 +6,7 @@ import { persistor, store } from './redux/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { BrowserRouter } from "react-router-dom";
 import { io } from "socket.io-client";
-let socket = io('http://localhost:5500');
+let socket = io('https://Chatbot_miniProj-api.onrender.com');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
