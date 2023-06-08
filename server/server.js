@@ -16,7 +16,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: ['https://Wysa-MiniProject.onrender.com']
+        origin: ['https://wysa-miniproject.onrender.com']
     },
     pingTimeout: 60000
 });
@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json({limit: '50mb'}));
 app.use(cookieParser());
 app.use(cors({
-    origin: ['https://Wysa-MiniProject.onrender.com'],
+    origin: ['https://wysa-miniproject.onrender.com'],
     methods: ['POST', 'GET', 'HEAD', 'PUT', 'DELETE'],
     credentials: true
 }))
